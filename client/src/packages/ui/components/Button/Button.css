@@ -1,0 +1,90 @@
+.Button {
+  align-items: center;
+  border: 0;
+  border-radius: var(--small-border-radius);
+  cursor: pointer;
+  display: flex;
+  transition: var(--main-transition-params);
+  user-select: none;
+  width: max-content;
+}
+
+.Button--fullwidth {
+  width: 100%;
+}
+
+.Button--default {
+  background-color: var(--neutral-color);
+  color: var(--secondary-color);
+}
+
+body.desktop .Button:not(:disabled).Button--default:hover {
+  background-color: var(--neutral-hover-color);
+}
+
+.Button--success {
+  background-color: var(--success-color);
+  color: var(--secondary-color);
+}
+
+body.desktop .Button:not(:disabled).Button--success:hover {
+  background-color: var(--success-hover-color);
+}
+
+.Button--danger {
+  background-color: var(--danger-color);
+  color: var(--secondary-color);
+}
+
+body.desktop .Button:not(:disabled).Button--danger:hover {
+  background-color: var(--danger-hover-color);
+}
+
+.Button--small {
+  max-height: 30px;
+  min-width: 60px;
+  padding: 6px 10px;
+}
+
+.Button--medium {
+  max-height: 36px;
+  min-width: 80px;
+  padding: 8px 12px;
+}
+
+.Button--large {
+  max-height: 44px;
+  min-width: 92px;
+  padding: 10px 14px;
+}
+
+.Button--left {
+  justify-content: flex-start;
+}
+
+.Button--center {
+  justify-content: center;
+}
+
+.Button--right {
+  justify-content: flex-end;
+}
+
+.Button--minimal {
+  background-color: transparent;
+  border: 1px solid var(--neutral-color);
+  color: var(--main-color);
+}
+
+body.desktop .Button:not(:disabled).Button--minimal:hover {
+  background-color: rgb(241 241 241);
+}
+
+.Button-rightIcon {
+  margin-left: 6px;
+}
+
+.Button:disabled {
+  background-color: var(--disabled-color);
+  cursor: default;
+}

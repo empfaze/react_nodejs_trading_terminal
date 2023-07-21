@@ -1,0 +1,5 @@
+export enum ClientMessage {
+  SUBSCRIBE_MARKET_DATA = 1,
+  UNSUBSCRIBE_MARKET_DATA = 2,
+  PLACE_ORDER = 3,
+}

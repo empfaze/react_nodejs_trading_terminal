@@ -1,0 +1,61 @@
+.Text {
+  color: var(--main-color);
+  display: inline;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.Text--small {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.Text--medium {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.Text--large {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.Text--left {
+  text-align: left;
+}
+
+.Text--center {
+  text-align: center;
+}
+
+.Text--right {
+  text-align: right;
+}
+
+.Text--bold {
+  font-weight: 700;
+}
+
+.Text--inherit {
+  color: inherit;
+}
+
+.Text--black {
+  color: var(--main-color);
+}
+
+.Text--white {
+  color: var(--secondary-color);
+}
+
+.Text--gray {
+  color: var(--tertiary-color);
+}
+
+.Text--green {
+  color: var(--success-color);
+}
+
+.Text--red {
+  color: var(--danger-color);
+}

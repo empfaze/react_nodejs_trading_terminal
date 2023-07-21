@@ -1,0 +1,20 @@
+.Table {
+  min-width: 800px;
+}
+
+.TableCell {
+  padding: 8px;
+  vertical-align: top;
+}
+
+.TableCell--left {
+  text-align: left;
+}
+
+.TableCell--center {
+  text-align: center;
+}
+
+.TableCell--right {
+  text-align: right;
+}

@@ -1,0 +1,37 @@
+.Icon {
+  align-items: center;
+  display: inline-flex;
+  height: 16px;
+  justify-content: center;
+  width: 16px;
+}
+
+.Icon > svg {
+  display: flex;
+  width: 100%;
+}
+
+.Icon--inline {
+  display: inline-block;
+}
+
+.Icon--inline > svg {
+  display: inline-block;
+  width: auto;
+}
+
+.Icon--center {
+  vertical-align: middle;
+}
+
+.Icon--baseline {
+  vertical-align: baseline;
+}
+
+.Icon--top {
+  vertical-align: text-top;
+}
+
+.Icon--bottom {
+  vertical-align: text-bottom;
+}

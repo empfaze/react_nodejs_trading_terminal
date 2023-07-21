@@ -1,0 +1,54 @@
+.Menu {
+  border-radius: 4px;
+  box-shadow: var(--main-box-shadow);
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+}
+
+.MenuOverlay {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+}
+
+.MenuItem {
+  background-color: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  transition: var(--main-transition-params);
+  width: 100%;
+}
+
+body.desktop .MenuItem:hover {
+  background-color: var(--secondary-hover-color);
+}
+
+.MenuItem--left {
+  justify-content: flex-start;
+}
+
+.MenuItem--center {
+  justify-content: center;
+}
+
+.MenuItem--right {
+  justify-content: flex-end;
+}
+
+.MenuItem--small {
+  padding: 4px;
+}
+
+.MenuItem--medium {
+  padding: 8px;
+}
+
+.MenuItem--large {
+  padding: 12px;
+}

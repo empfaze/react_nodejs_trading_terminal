@@ -1,0 +1,9 @@
+.NumberInput {
+  border: 1px solid var(--neutral-color);
+  border-radius: var(--small-border-radius);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 12px;
+  text-align: center;
+  width: 100%;
+}

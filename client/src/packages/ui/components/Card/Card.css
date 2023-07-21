@@ -1,0 +1,6 @@
+.Card {
+  background-color: var(--secondary-color);
+  border-radius: var(--large-border-radius);
+  box-shadow: var(--main-box-shadow);
+  padding: 24px;
+}

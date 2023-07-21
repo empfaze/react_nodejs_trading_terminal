@@ -1,0 +1,29 @@
+.Notification {
+  align-items: flex-start;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 5%), 0 10px 15px -3px rgb(0 0 0 / 10%),
+    0 4px 6px -2px rgb(0 0 0 / 5%);
+  display: flex;
+  min-height: 36px;
+  padding: 16px;
+  position: relative;
+  width: 350px;
+}
+
+.Notification:not(:first-child) {
+  margin-top: 8px;
+}
+
+.Notification-body {
+  display: flex;
+  flex-direction: column;
+  margin-right: 12px;
+  row-gap: 4px;
+}
+
+.Notification-removeButton {
+  cursor: pointer;
+  margin-left: auto;
+  padding-top: 4px;
+}

@@ -1,0 +1,17 @@
+@font-face {
+  font-display: swap;
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../assets/fonts/OpenSans-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../assets/fonts/OpenSans-Regular.woff') format('woff');
+}
