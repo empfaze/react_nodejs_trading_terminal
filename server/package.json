@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "commonjs",
   "scripts": {
-    "start": "node ./build/main.js",
+    "start": "nodemon",
     "build": "rm -rf build & tsc",
     "eslint": "npx eslint src",
     "eslint:fix": "yarn eslint --fix",
@@ -25,6 +25,8 @@
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
-    "prettier": "2.8.8"
+    "nodemon": "^3.0.1",
+    "prettier": "2.8.8",
+    "ts-node": "^10.9.1"
   }
 }
