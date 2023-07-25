@@ -4,12 +4,40 @@ import { App } from './app';
 import { UsersController } from './controllers';
 import { ExceptionFilter } from './filters';
 import { LoggerService } from './services/LoggerService';
-import { IExceptionFilter, ILoggerService, INVERSIFY_TYPES } from './types';
+import {
+  IConfigService,
+  IExceptionFilter,
+  ILoggerService,
+  INVERSIFY_TYPES,
+  IUsersController,
+  IUsersRepository,
+  IUsersService,
+} from './types';
+import { ConfigService, UsersService, PrismaService } from './services';
+import { UsersRepository } from './repositories';
 
 export const appBindings = new ContainerModule((bind: interfaces.Bind) => {
-  bind<ILoggerService>(INVERSIFY_TYPES.ILoggerService).to(LoggerService);
-  bind<IExceptionFilter>(INVERSIFY_TYPES.IExceptionFilter).to(ExceptionFilter);
-  bind<UsersController>(INVERSIFY_TYPES.UsersController).to(UsersController);
+  bind<ILoggerService>(INVERSIFY_TYPES.LoggerService)
+    .to(LoggerService)
+    .inSingletonScope();
+  bind<IExceptionFilter>(INVERSIFY_TYPES.ExceptionFilter)
+    .to(ExceptionFilter)
+    .inSingletonScope();
+  bind<IUsersController>(INVERSIFY_TYPES.UsersController)
+    .to(UsersController)
+    .inSingletonScope();
+  bind<IUsersService>(INVERSIFY_TYPES.UsersService)
+    .to(UsersService)
+    .inSingletonScope();
+  bind<IConfigService>(INVERSIFY_TYPES.ConfigService)
+    .to(ConfigService)
+    .inSingletonScope();
+  bind<PrismaService>(INVERSIFY_TYPES.PrismaService)
+    .to(PrismaService)
+    .inSingletonScope();
+  bind<IUsersRepository>(INVERSIFY_TYPES.UsersRepository)
+    .to(UsersRepository)
+    .inSingletonScope();
   bind<App>(INVERSIFY_TYPES.Application).to(App);
 });
 

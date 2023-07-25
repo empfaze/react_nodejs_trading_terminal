@@ -1,6 +1,10 @@
 export const INVERSIFY_TYPES = {
   Application: Symbol.for('Application'),
-  ILoggerService: Symbol.for('ILoggerService'),
+  LoggerService: Symbol.for('LoggerService'),
   UsersController: Symbol.for('UsersController'),
-  IExceptionFilter: Symbol.for('IExceptionFilter'),
+  UsersService: Symbol.for('UsersService'),
+  ExceptionFilter: Symbol.for('ExceptionFilter'),
+  ConfigService: Symbol.for('ConfigService'),
+  PrismaService: Symbol.for('PrismaService'),
+  UsersRepository: Symbol.for('UsersRepository'),
 };

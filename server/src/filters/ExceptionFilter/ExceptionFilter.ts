@@ -10,7 +10,8 @@ import { inject, injectable } from 'inversify';
 @injectable()
 export class ExceptionFilter implements IExceptionFilter {
   constructor(
-    @inject(INVERSIFY_TYPES.ILoggerService) private logger: ILoggerService,
+    @inject(INVERSIFY_TYPES.LoggerService)
+    private loggerService: ILoggerService,
   ) {}
 
   catch(
@@ -20,13 +21,13 @@ export class ExceptionFilter implements IExceptionFilter {
     next: NextFunction,
   ) {
     if (err instanceof HTTPError) {
-      this.logger.error(
+      this.loggerService.error(
         `[${err.context}] - Status ${err.code} -  ${err.message}`,
       );
 
       res.status(err.code).send({ err: err.message });
     } else {
-      this.logger.error(err.message);
+      this.loggerService.error(err.message);
 
       res.status(500).send({ err: err.message });
     }
