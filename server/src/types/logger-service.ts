@@ -1,6 +1,6 @@
 import { ILogObj, Logger } from 'tslog';
 
-export interface ILogger {
+export interface ILoggerService {
   logger: Logger<ILogObj>;
   log: (...args: unknown[]) => void;
   warn: (...args: unknown[]) => void;
