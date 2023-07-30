@@ -43,7 +43,7 @@ export class App {
   public async init() {
     this.useMiddleware();
     this.useRoutes();
-    this.useExceptionFilters();
+    // this.useExceptionFilters();
 
     await this.prismaService.connect();
 

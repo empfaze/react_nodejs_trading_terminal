@@ -102,9 +102,9 @@ export class UsersController
   private async signJWT(email: string, secret: string) {
     return new Promise((resolve, reject) => {
       sign(
-        { email, iat: Math.floor(Date.now() / 1000) },
+        { email },
         secret,
-        { algorithm: 'HS256' },
+        { algorithm: 'HS256', expiresIn: '30m' },
         (err, token) => {
           if (err) {
             reject(err);

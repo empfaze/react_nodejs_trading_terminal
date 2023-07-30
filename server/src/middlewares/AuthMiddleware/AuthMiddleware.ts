@@ -10,11 +10,9 @@ export class AuthMiddleware implements IMiddleware {
       return next(new HTTPError(401, 'Unauthorized', 'Access denied'));
     }
 
-    const token = req.headers.authorization?.split(' ')[1];
-
-    verify(token, this.secret, (err, payload) => {
+    verify(req.headers.authorization, this.secret, (err, payload) => {
       if (err) {
-        return next(new HTTPError(401, 'Unauthorized', 'Access denied'));
+        return next(new HTTPError(401, err.name, err.message));
       }
 
       req.email = (payload as JwtPayload).email;
