@@ -7,4 +7,5 @@ Here you will be able to make transactions, buy and sell different types of inst
 It is not finished yet, but will be finished in the near future.
 
 Frontend stack: React / WebSockets
+
 Backend stack: Express / PostgreSQL / Prisma ORM
